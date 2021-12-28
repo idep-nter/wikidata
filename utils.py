@@ -6,7 +6,7 @@ def get_stdforms(entity, data):
                 PREFIX wd: <http://www.wikidata.org/entity/>
                 PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#>
                 SELECT ?name
-                WHERE {{ wd:{entity} rdfs:label ?name.
+                WHERE {{ wd:{entity} rdf:label ?name.
                     FILTER(lang(?name) = '{language}')
                 }}
             """
